@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css?family=Voltaire");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  cursor: none;
+}
+
+/* HEADER */
+
+.nav-wrapper {
+  width: 100%;
+  background: #0c0c0c;
+}
+
+.nav-wrapper nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  top: 50%;
+}
+
+.link {
+  transition: all 0.3s ease;
+}
+
+.link span {
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  pointer-event: none;
+  transition: transform 0.1s linear;
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0.3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform 0.3s ease;
+}
+
+.link:hover ~ .cursor {
+  transform:translate(-50%, -50%) scale(8);
+}
+
+
+@media screen and (max-width: 1024px) { 
+
+  .nav-wrapper nav {
+    flex-direction: column;
+  }
+
+}  
+
+header {
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: #0c0c0c;
+  padding: 15px; 
+}
+
+a {
+  text-decoration: none;
+
+}
+
+.logo {
+  display: flex;
+}
+.greetingGeneral{
+  display: block;
+}
+
+#imgLogo{
+  width: 105px;
+  margin: 13px 0px 0px 30px;
+  height: auto; 
+  cursor: pointer;
+}
+.greetingGeneral{
+  display: block;
+  width: 225px;
+}
+
+#Header_Title{  
+  font-size: 20px;
+  padding: 0px 0px 0px 25px;
+  color: #ffffff;
+}
+
+#Header_Title-Username  {
+  color: #5e94ff;
+}
+
+.Estados{
+  display: flex;
+}
+
+.Purple {
+  color: #5e94ff;
+}
+
+.svgHome{
+  margin-right: 10px ;
+}
+
+.userPart{
+  display: flex;
+}
+
+.svgProfile{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 5px 14px 0px 14px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #0c0c0c;
+  cursor: pointer;
+}
+
+.svgProfile:hover{
+  background-color: #0c0c0c;
+  transition: .2s;
+}
+
+.svgChat{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 0px 12px 0px 12px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #0c0c0c;
+  cursor: pointer;
+}
+
+.svgChat:hover{
+  background-color: #0c0c0c;
+  transition: .2s;
+}
+
+#imgUserP img {
+  cursor: pointer;
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left:5px;
+}
+
+#imagenesGuardadas img{
+width: 200px; 
+height: 200px; 
+border-radius: 50%;
+}
+
+#imagenesGuardadas {
+margin: auto;
+border-radius: 50%;
+align-items: center;
+}
+
+#imgUserP img:hover {
+  filter: blur(0.4px);
+  transition: .2s;
+}
+
+
+.user {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 3px 3px 10px;
+  display: flex;
+  color: #fff;
+  background-color: #0c0c0c;
+  border-radius: 9px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 20px 0px 0px;
+}
+
+.user:hover {
+  transition: 0.2s;
+  background-color: #0c0c0c;
+}
+
+#myName{
+  color: #5e94ff;
+}
+
+/*game*/
+
+#world {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #dbe6e6;
+  overflow: hidden;
+}
+
+#gameoverInstructions {
+  position: absolute;
+  font-family: "Voltaire", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 120px;
+  text-align: center;
+  color: #ffc5a2;
+  opacity: 0;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -100%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 500ms ease-in-out;
+}
+
+#gameoverInstructions.show {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: all 500ms ease-in-out;
+}
+
+#dist {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%, 0%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.label {
+  position: relative;
+  font-family: "Voltaire", sans-serif;
+  text-transform: uppercase;
+  color: #ffa873;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#distValue {
+  position: relative;
+  text-transform: uppercase;
+  color: #dc5f45;
+  font-size: 40px;
+  font-family: "Voltaire";
+  text-align: center;
+}
+
+#credits {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  bottom: 0;
+  margin-bottom: 20px;
+  font-family: "Voltaire", sans-serif;
+  color: #544027;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#credits a {
+  color: #544027;
+}
+
+#credits a:hover {
+  color: #dc5f45;
+}
+
+#instructions {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  margin: auto;
+  margin-bottom: 50px;
+  font-family: "Voltaire", sans-serif;
+  color: #dc5f45;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.lightInstructions {
+  color: #5f9042;
+}
