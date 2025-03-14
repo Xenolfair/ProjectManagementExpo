@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+:root {
+    --bg-color-Dark: #161717;
+    --bg-input-color: #131313;
+    --bg-input-border-color: #5D5D5D;
+    --main-color: #0066FE;
+    --main-color-fill: #001F3D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: var(--bg-color-Dark);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+header {
+    background-color: #141414;
+    height: 100vh;
+}
+
+h1{
+    font-size: 40px;
+    padding: 40px;
+    margin-bottom: 120px;
+}
+
+ #loginTitle{
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
+    color: #5e94ff;;
+}
+
+
+.login_container > .login {
+ 
+    padding: 35px;
+    margin: 0 auto;
+}
+
+.login_container h3 {
+    font-size: 30px;
+}
+
+ .loginForm input {
+    padding: 10px;
+    background-color: var(--bg-input-color);
+    border: 1px solid var(--bg-input-border-color);
+    border-radius: 5px;
+    font-size: 25px;
+    color: var(--bg-input-border-color);
+}
+
+.loginForm {
+    display: grid;
+    place-content: center;
+    place-items: center;
+
+}
+
+
+.re-marked a {
+    text-decoration: none;
+    color: #ff516b;
+}
+
+.re-marked {
+    color: #60a651;
+}
+
+
+.button {
+    margin: 25px;
+    padding: 10px;
+    background-color:#5261ee;
+    border: 1px solid #0217DA;
+    font-size: 25px;
+    width: 335px;
+    border-radius: 5px;
+    color: #0217DA;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #424eb4;
+    transition: 0.2s;
+}
+
+#imgLogo{
+    margin-top: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.txtAccount {
+    font-size: 17px;
+    font-weight: 200;
+    color:white;
+    z-index: 10000;
+    margin: 0;
+    padding: 0;
+}
+/* animated*/
+
+.login_container {
+    box-sizing: border-box;
+    transition: color 0.25s ease;
+  }
+  :root {
+    --dark: #000000;
+    --light:#5e94ff;
+    --color: var(--dark);
+    --bg: var(--light);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color: var(--light);
+      --bg: var(--dark);
+    }
+  }
+  .animated {
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-size: 3.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+  }
+
+  .animated [data-char]:after {
+    -webkit-animation-name: glitch-switch;
+    animation-name: glitch-switch;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-iteration-count: infinite;
+  }
+
+  .animated p:nth-of-type(1) {
+    position: absolute;
+    opacity: 0;
+
+  }
+  .page p {
+    max-width: 300px;
+  }
+  .page p[data-scroll='in'] [data-char]:after {
+    -webkit-animation-name: glitch-switch;
+            animation-name: glitch-switch;
+  }
+
+  .reveal--2 [data-char]:after {
+    -webkit-animation-iteration-count: --count;
+            animation-iteration-count: --count;          
+  }
+
+  p:nth-of-type(1) {
+    position: absolute;
+    opacity: 0;
+  }
+  .word {
+    position: relative;
+    display: inline-block;
+  }
+  [data-char] {
+    color: transparent;
+    position: relative;
+  }
+
+  [data-char]:after {
+    --txt: attr(data-char);
+    -webkit-animation-duration: 0.5s ;
+            animation-duration: 0.5s infinite;
+    -webkit-animation-delay: 0.5s infinite;
+            animation-delay: 0.5s infinite;
+    -webkit-animation-timing-function: steps(1);
+            animation-timing-function: steps(1);
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;            
+    content: var(--txt);
+    color: var(--color);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  /**
+   * Themeing
+  */
+  .page {
+    align-items: center;
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    position: relative;
+    scroll-snap-align: center;
+    width: 50vw;
+  }
+
+  .container {
+    height: 100vh;
+    overflow: auto;
+    overflow-x: hidden;
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+  }
+
+  @-webkit-keyframes glitch-switch {
+    0% {
+      content: var(--char-0);
+    }
+    10% {
+      content: var(--char-1);
+    }
+    20% {
+      content: var(--char-2);
+    }
+    30% {
+      content: var(--char-3);
+    }
+    40% {
+      content: var(--char-4);
+    }
+    50% {
+      content: var(--char-5);
+    }
+    60% {
+      content: var(--char-6);
+    }
+    70% {
+      content: var(--char-7);
+    }
+    80% {
+      content: var(--char-8);
+    }
+    90% {
+      content: var(--char-9);
+    }
+    100% {
+      content: var(--txt);
+    }
+  }
+  @keyframes glitch-switch {
+    0% {
+      content: var(--char-0);
+    }
+    10% {
+      content: var(--char-1);
+    }
+    20% {
+      content: var(--char-2);
+    }
+    30% {
+      content: var(--char-3);
+    }
+    40% {
+      content: var(--char-4);
+    }
+    50% {
+      content: var(--char-5);
+    }
+    60% {
+      content: var(--char-6);
+    }
+    70% {
+      content: var(--char-7);
+    }
+    80% {
+      content: var(--char-8);
+    }
+    90% {
+      content: var(--char-9);
+    }
+    100% {
+      content: var(--txt);
+    }
+  }

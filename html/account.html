@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/account.css">
+    <link rel="icon" type="image/x-icon" href="/media/shortcutIcon.webp">
+    <title>To Do CIAF | Mi Cuenta</title>
+</head>
+<body>
+    <!--https://neumorphism.io/#e0e0e0        Para los efectos de sombra-->
+    <header>
+        <div class="logo">
+            <a id="aLogo"href="/html/home.html"><img id="imgLogo" src="/media/logo.png" alt=""></a>
+            
+            <div class="greetingGeneral">
+                <h1 id="Header_Title"><span id="Header_Title-Username"></span></h1>
+            </div>
+        </div>
+
+        <div class="nav-wrapper">
+            <nav>
+              <a href="/html/home.html" class="link">
+                <span>Inicio</span>
+              </a>
+              <a href="" class="link">
+                <span>Mi progreso</span>
+              </a>
+              <a href="" class="link">
+                <span>Comunidad</span>
+              </a>
+              <a href="/html/tasks.html" class="link">
+                <span>Tareas</span>
+              </a>
+              <a href="/html/account.html" class="link">
+                <span>Cuenta</span>
+              </a>
+          
+              <div class="cursor"></div>
+            </nav>
+          </div>
+
+        <div class="userPart">
+            <div class="svgChat">
+                <a href="/html/easter.html"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);transform: msFilter"><circle cx="9.5" cy="9.5" r="1.5"></circle><circle cx="14.5" cy="9.5" r="1.5"></circle><path d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.897 5.515 5 6.934V22l5.34-4.004C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8zm0 14h-.333L9 18v-2.417l-.641-.247C5.671 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6-3.589 6-8 6z"></path></svg></a>
+            </div>
+
+            <div class="svgProfile">
+                <a href="/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);transform: msFilter"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg></a>
+            </div>
+
+            <a href="/html/account.html">
+                <div class="user">
+                    <h3 id="myName"></h3>
+                    
+                    <div id="imgUserP">
+                        <img src="https://jobsaca.com.cy/wp-content/uploads/2015/05/icon-user-default.png">
+                    </div>
+                    <script>function mostrarImagenesGuardadas2() {
+                          const contenedorImagenes = document.getElementById('imgUserP');
+                          const imagenesGuardadas = JSON.parse(localStorage.getItem('imagenes')) || [];
+
+                          contenedorImagenes.innerHTML = '';
+
+                          if (imagenesGuardadas.length > 0) {
+                              const imagen = document.createElement('img');
+                              imagen.src = imagenesGuardadas[imagenesGuardadas.length - 1];
+                              contenedorImagenes.appendChild(imagen);
+                          } else {
+                              const imagenDefecto = document.createElement('img');
+                              imagenDefecto.src = 'https://jobsaca.com.cy/wp-content/uploads/2015/05/icon-user-default.png'; 
+                              imagenDefecto.alt = 'Enlace por defecto';
+                              contenedorImagenes.appendChild(imagenDefecto);
+                          }
+                        }
+
+                        mostrarImagenesGuardadas2();</script>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="profile">
+                <div id="imagenesGuardadas">
+                    <img src="https://jobsaca.com.cy/wp-content/uploads/2015/05/icon-user-default.png" alt="Foto de perfil">
+                </div>
+
+                <h2 id="Header_Title-Username2">User</h2>
+
+                <h2 id="txtLink">Sube el enlace de la imagen de tu perfil...</h2>
+
+                <form id="formularioImagen">
+                    <input type="text" id="enlaceImagen" name="enlaceImagen" autocomplete="off">
+                    <button id="buttonGuardar" type="button" onclick="guardarEnlace()">Guardar</button>
+                    <hr id="lineImg">
+                </form>
+            </div>
+
+            <div class="containerUserN">
+                <div class="amigosH3">
+                    <h3 id="h3N">Tareas creadas: </h3>
+                    <p id="ph3Amigos"></p>
+                </div>
+        
+                <div class="PublicionesH3">
+                    <h3 id="h3N">Tareas completadas: </h3>
+                    <p id="ph3Publiciones"></p>
+                </div>
+        
+                <div class="SeguidoresH3">
+                    <h3 id="h3N">Tareas pendientes: </h3>
+                    <p id="ph3Seguidores"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="wave">
+        <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 170" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(12, 12, 12, 1)" offset="0%"></stop><stop stop-color="rgba(12, 12, 12, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,136L80,116.2C160,96,320,57,480,59.5C640,62,800,108,960,124.7C1120,142,1280,130,1440,104.8C1600,79,1760,40,1920,19.8C2080,0,2240,0,2400,0C2560,0,2720,0,2880,17C3040,34,3200,68,3360,87.8C3520,108,3680,113,3840,121.8C4000,130,4160,142,4320,127.5C4480,113,4640,74,4800,70.8C4960,68,5120,102,5280,96.3C5440,91,5600,45,5760,42.5C5920,40,6080,79,6240,82.2C6400,85,6560,51,6720,34C6880,17,7040,17,7200,19.8C7360,23,7520,28,7680,39.7C7840,51,8000,68,8160,73.7C8320,79,8480,74,8640,82.2C8800,91,8960,113,9120,127.5C9280,142,9440,147,9600,127.5C9760,108,9920,62,10080,48.2C10240,34,10400,51,10560,59.5C10720,68,10880,68,11040,70.8C11200,74,11360,79,11440,82.2L11520,85L11520,170L11440,170C11360,170,11200,170,11040,170C10880,170,10720,170,10560,170C10400,170,10240,170,10080,170C9920,170,9760,170,9600,170C9440,170,9280,170,9120,170C8960,170,8800,170,8640,170C8480,170,8320,170,8160,170C8000,170,7840,170,7680,170C7520,170,7360,170,7200,170C7040,170,6880,170,6720,170C6560,170,6400,170,6240,170C6080,170,5920,170,5760,170C5600,170,5440,170,5280,170C5120,170,4960,170,4800,170C4640,170,4480,170,4320,170C4160,170,4000,170,3840,170C3680,170,3520,170,3360,170C3200,170,3040,170,2880,170C2720,170,2560,170,2400,170C2240,170,2080,170,1920,170C1760,170,1600,170,1440,170C1280,170,1120,170,960,170C800,170,640,170,480,170C320,170,160,170,80,170L0,170Z"></path><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(12, 12, 12, 1)" offset="0%"></stop><stop stop-color="rgba(12, 12, 12, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,0L80,2.8C160,6,320,11,480,28.3C640,45,800,74,960,73.7C1120,74,1280,45,1440,31.2C1600,17,1760,17,1920,25.5C2080,34,2240,51,2400,59.5C2560,68,2720,68,2880,68C3040,68,3200,68,3360,56.7C3520,45,3680,23,3840,31.2C4000,40,4160,79,4320,93.5C4480,108,4640,96,4800,99.2C4960,102,5120,119,5280,127.5C5440,136,5600,136,5760,121.8C5920,108,6080,79,6240,70.8C6400,62,6560,74,6720,82.2C6880,91,7040,96,7200,82.2C7360,68,7520,34,7680,42.5C7840,51,8000,102,8160,102C8320,102,8480,51,8640,31.2C8800,11,8960,23,9120,22.7C9280,23,9440,11,9600,17C9760,23,9920,45,10080,51C10240,57,10400,45,10560,48.2C10720,51,10880,68,11040,62.3C11200,57,11360,28,11440,14.2L11520,0L11520,170L11440,170C11360,170,11200,170,11040,170C10880,170,10720,170,10560,170C10400,170,10240,170,10080,170C9920,170,9760,170,9600,170C9440,170,9280,170,9120,170C8960,170,8800,170,8640,170C8480,170,8320,170,8160,170C8000,170,7840,170,7680,170C7520,170,7360,170,7200,170C7040,170,6880,170,6720,170C6560,170,6400,170,6240,170C6080,170,5920,170,5760,170C5600,170,5440,170,5280,170C5120,170,4960,170,4800,170C4640,170,4480,170,4320,170C4160,170,4000,170,3840,170C3680,170,3520,170,3360,170C3200,170,3040,170,2880,170C2720,170,2560,170,2400,170C2240,170,2080,170,1920,170C1760,170,1600,170,1440,170C1280,170,1120,170,960,170C800,170,640,170,480,170C320,170,160,170,80,170L0,170Z"></path><defs><linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(12, 12, 12, 1)" offset="0%"></stop><stop stop-color="rgba(12, 12, 12, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)" d="M0,17L80,19.8C160,23,320,28,480,31.2C640,34,800,34,960,53.8C1120,74,1280,113,1440,107.7C1600,102,1760,51,1920,36.8C2080,23,2240,45,2400,62.3C2560,79,2720,91,2880,93.5C3040,96,3200,91,3360,99.2C3520,108,3680,130,3840,124.7C4000,119,4160,85,4320,76.5C4480,68,4640,85,4800,82.2C4960,79,5120,57,5280,56.7C5440,57,5600,79,5760,76.5C5920,74,6080,45,6240,53.8C6400,62,6560,108,6720,130.3C6880,153,7040,153,7200,141.7C7360,130,7520,108,7680,85C7840,62,8000,40,8160,36.8C8320,34,8480,51,8640,59.5C8800,68,8960,68,9120,76.5C9280,85,9440,102,9600,93.5C9760,85,9920,51,10080,39.7C10240,28,10400,40,10560,62.3C10720,85,10880,119,11040,113.3C11200,108,11360,62,11440,39.7L11520,17L11520,170L11440,170C11360,170,11200,170,11040,170C10880,170,10720,170,10560,170C10400,170,10240,170,10080,170C9920,170,9760,170,9600,170C9440,170,9280,170,9120,170C8960,170,8800,170,8640,170C8480,170,8320,170,8160,170C8000,170,7840,170,7680,170C7520,170,7360,170,7200,170C7040,170,6880,170,6720,170C6560,170,6400,170,6240,170C6080,170,5920,170,5760,170C5600,170,5440,170,5280,170C5120,170,4960,170,4800,170C4640,170,4480,170,4320,170C4160,170,4000,170,3840,170C3680,170,3520,170,3360,170C3200,170,3040,170,2880,170C2720,170,2560,170,2400,170C2240,170,2080,170,1920,170C1760,170,1600,170,1440,170C1280,170,1120,170,960,170C800,170,640,170,480,170C320,170,160,170,80,170L0,170Z"></path><defs><linearGradient id="sw-gradient-3" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(12, 12, 12, 1)" offset="0%"></stop><stop stop-color="rgba(12, 12, 12, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 150px); opacity:0.7" fill="url(#sw-gradient-3)" d="M0,0L80,11.3C160,23,320,45,480,56.7C640,68,800,68,960,70.8C1120,74,1280,79,1440,85C1600,91,1760,96,1920,96.3C2080,96,2240,91,2400,73.7C2560,57,2720,28,2880,17C3040,6,3200,11,3360,22.7C3520,34,3680,51,3840,68C4000,85,4160,102,4320,93.5C4480,85,4640,51,4800,51C4960,51,5120,85,5280,93.5C5440,102,5600,85,5760,68C5920,51,6080,34,6240,31.2C6400,28,6560,40,6720,36.8C6880,34,7040,17,7200,34C7360,51,7520,102,7680,124.7C7840,147,8000,142,8160,119C8320,96,8480,57,8640,51C8800,45,8960,74,9120,73.7C9280,74,9440,45,9600,39.7C9760,34,9920,51,10080,56.7C10240,62,10400,57,10560,68C10720,79,10880,108,11040,113.3C11200,119,11360,102,11440,93.5L11520,85L11520,170L11440,170C11360,170,11200,170,11040,170C10880,170,10720,170,10560,170C10400,170,10240,170,10080,170C9920,170,9760,170,9600,170C9440,170,9280,170,9120,170C8960,170,8800,170,8640,170C8480,170,8320,170,8160,170C8000,170,7840,170,7680,170C7520,170,7360,170,7200,170C7040,170,6880,170,6720,170C6560,170,6400,170,6240,170C6080,170,5920,170,5760,170C5600,170,5440,170,5280,170C5120,170,4960,170,4800,170C4640,170,4480,170,4320,170C4160,170,4000,170,3840,170C3680,170,3520,170,3360,170C3200,170,3040,170,2880,170C2720,170,2560,170,2400,170C2240,170,2080,170,1920,170C1760,170,1600,170,1440,170C1280,170,1120,170,960,170C800,170,640,170,480,170C320,170,160,170,80,170L0,170Z"></path></svg>
+      </div>
+      <footer class="footer">
+          <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="">
+                <ion-icon name="logo-github"></ion-icon>
+              </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a></li>
+          </ul>
+          <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="/html/home.html">Inicio</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Comunidad</a></li>
+            <li class="menu__item"><a class="menu__link" href="/html/tasks.html">Tareas</a></li>
+            <li class="menu__item"><a class="menu__link" href="/html/account.html">Cuenta</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Contacto</a></li>
+      
+          </ul>
+          <p>&copy; 2025 To Do CIAF | Todos los derechos reservados</p>
+      </footer>
+  
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+      <script src="/js/home.js"></script>
+      <script src="/js/greetingUser.js"></script>
+      <script src="/js/cursor.js"></script>
+  
+      <script src='https://unpkg.com/gsap@3/dist/gsap.min.js'></script>
+      <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script><script  src="/js/photoHome.js"></script>
+
+    <script src="/js/userInfo.js"></script>
+    <script src="/js/greetingUser.js"></script>
+</body>
+</html>
