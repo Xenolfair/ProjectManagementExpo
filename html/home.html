@@ -103,8 +103,63 @@
             <div class="lineOfCode"><s>// Miguel Ballesteros, Angel Arenas, Daniel Vasquez Marín, Oscar Daniel Gil</s></div>
             <div class="lineOfCode"><s>// Luis Alejandro Ospina, Juan Pulgarín</s></div></code>
         </pre>
+        <!-- Sección de Perfil -->
+        <h1 class="main-title" style="padding-top: 50px;">Perfil de Usuario <span class="thin"></span> ✍️📖👦</h1>
 
-        <h3 class="main-title">Regálanos tu firma para <span class="thin">empezar</span> ✍️📖</h3>
+        <section id="calculadoras" style="margin-bottom: 50px;">
+          <div id="simulador">
+            <form id="perfilForm">
+              <div id="formName">
+                <section id="FormComplete">
+                  <div class="input-group">
+                    <label for="nombre" class="user-label">Número de grupo</label>
+                    <input type="text" id="nombre" class="input">
+                  </div>
+                  <div class="input-group">
+                    <label for="meta" class="user-label">Nombre</label>
+                    <input type="text" id="meta" class="input">
+                  </div>
+                </section>
+
+                <div id="imagenesGuardadas">
+                  <img src="https://jobsaca.com.cy/wp-content/uploads/2015/05/icon-user-default.png" alt="Foto de perfil">
+                </div>
+                  <script>
+                    function mostrarImagenesGuardadas() {
+                      const contenedorImagenes = document.getElementById('imagenesGuardadas'); // Obtiene el contenedor de imágenes guardadas.
+                      const imagenesGuardadas = JSON.parse(localStorage.getItem('imagenes')) || []; // Recupera las imágenes guardadas.
+                  
+                      contenedorImagenes.innerHTML = ''; // Limpia el contenedor de imágenes.
+                  
+                      // Si hay imágenes guardadas, muestra la última imagen.
+                      if (imagenesGuardadas.length > 0) {
+                          const imagen = document.createElement('img'); // Crea un nuevo elemento de imagen.
+                          imagen.src = imagenesGuardadas[imagenesGuardadas.length - 1]; // Asigna la última imagen guardada como fuente.
+                          contenedorImagenes.appendChild(imagen); // Agrega la imagen al contenedor.
+                      } else {
+                          // Si no hay imágenes guardadas, muestra una imagen por defecto.
+                          const imagenDefecto = document.createElement('img'); // Crea un nuevo elemento de imagen.
+                          imagenDefecto.src = 'https://jobsaca.com.cy/wp-content/uploads/2015/05/icon-user-default.png'; // Asigna la imagen por defecto.
+                          imagenDefecto.alt = 'Enlace por defecto'; // Asigna un texto alternativo a la imagen.
+                          contenedorImagenes.appendChild(imagenDefecto); // Agrega la imagen por defecto al contenedor.
+                      }
+                    }
+                    
+                    // Llama a la función para mostrar las imágenes guardadas al cargar la página.
+                    mostrarImagenesGuardadas();
+                </script>
+              </div>
+
+              <button type="submit" class="submitButton">
+                <span class="transition"></span>
+                <span class="gradient"></span>
+                <span class="text">Guardar</span>
+              </button>
+              
+            </form>       
+          </div>
+        </section>
+
         <img src="/media/money__2_-removebg-preview.png" alt="" style="display:block; margin: auto; width: 220px; padding-top: 20px;">
         <div class="modal">
             <div class="field-wrapper">
@@ -257,67 +312,6 @@
               <div class="signature-main"></div>
             </div>
           </div>
-
-
-        <!-- Sección de Comunidad -->
-
-
-        <!-- Sección de Perfil -->
-        <h1 class="main-title" style="padding-top: 50px;">Perfil de Usuario <span class="thin"></span> 🤔👦</h1>
-
-        <section id="calculadoras" style="margin-bottom: 50px;">
-          <div id="simulador">
-            <form id="perfilForm">
-              <div id="formName">
-                <section id="FormComplete">
-                  <div class="input-group">
-                    <label for="nombre" class="user-label">Número de grupo</label>
-                    <input type="text" id="nombre" class="input">
-                  </div>
-                  <div class="input-group">
-                    <label for="meta" class="user-label">Nombre</label>
-                    <input type="text" id="meta" class="input">
-                  </div>
-                </section>
-
-                <div id="imagenesGuardadas">
-                  <img src="https://jobsaca.com.cy/wp-content/uploads/2015/05/icon-user-default.png" alt="Foto de perfil">
-                </div>
-                  <script>
-                    function mostrarImagenesGuardadas() {
-                      const contenedorImagenes = document.getElementById('imagenesGuardadas'); // Obtiene el contenedor de imágenes guardadas.
-                      const imagenesGuardadas = JSON.parse(localStorage.getItem('imagenes')) || []; // Recupera las imágenes guardadas.
-                  
-                      contenedorImagenes.innerHTML = ''; // Limpia el contenedor de imágenes.
-                  
-                      // Si hay imágenes guardadas, muestra la última imagen.
-                      if (imagenesGuardadas.length > 0) {
-                          const imagen = document.createElement('img'); // Crea un nuevo elemento de imagen.
-                          imagen.src = imagenesGuardadas[imagenesGuardadas.length - 1]; // Asigna la última imagen guardada como fuente.
-                          contenedorImagenes.appendChild(imagen); // Agrega la imagen al contenedor.
-                      } else {
-                          // Si no hay imágenes guardadas, muestra una imagen por defecto.
-                          const imagenDefecto = document.createElement('img'); // Crea un nuevo elemento de imagen.
-                          imagenDefecto.src = 'https://jobsaca.com.cy/wp-content/uploads/2015/05/icon-user-default.png'; // Asigna la imagen por defecto.
-                          imagenDefecto.alt = 'Enlace por defecto'; // Asigna un texto alternativo a la imagen.
-                          contenedorImagenes.appendChild(imagenDefecto); // Agrega la imagen por defecto al contenedor.
-                      }
-                    }
-                    
-                    // Llama a la función para mostrar las imágenes guardadas al cargar la página.
-                    mostrarImagenesGuardadas();
-                </script>
-              </div>
-
-              <button type="submit">
-                <span class="transition"></span>
-                <span class="gradient"></span>
-                <span class="text">Guardar</span>
-              </button>
-              
-            </form>       
-          </div>
-        </section>
         
         <h1 class="main-title" style="margin-bottom: 50px;"> <span class="thin">¿Empezamos?</span> 🚀</h1>
         <a href="/html/expo.html">

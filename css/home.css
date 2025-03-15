@@ -230,7 +230,7 @@ h2 {
 #calculadoras input, #perfil input, textarea {
     padding: 0.5em;
     margin-top: 1em;
-    width: 100%;
+    width: 115%;
     max-width: 300px;
     display: block;
 }
@@ -391,12 +391,12 @@ h2 {
 
   /*FIRMA */
   .modal {
-    margin: 200px auto;
+    margin: 0px auto 150px auto;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 36px;
-    width: 380px;
+    width: 500px;
     height: 82px;
     padding: 18px 24px 24px 24px;
     border-radius: 40px;
@@ -836,7 +836,7 @@ font-weight:100;
   
   #simulador {
     width: 100%;
-    max-width: 500px;
+    max-width: 565px;
     padding: 20px;
     background-image: 
     radial-gradient(circle at 20% 30%, rgba(255, 0, 100, 0.15), transparent 30%),  /* Rosa */
@@ -939,6 +939,10 @@ input[type=number]::-webkit-outer-spin-button {
 
   #formName{
     display: flex
+  }
+
+  .sin-borde {
+    border: none !important;
   }
    /*  Scrollbar */
 

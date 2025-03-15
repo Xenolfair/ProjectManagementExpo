@@ -93,3 +93,11 @@ function draw(key,animate) {
     }
   }
 }
+
+// tarjeta
+
+document.querySelector('.submitButton').addEventListener('click', () => {
+  document.querySelectorAll('input').forEach(input => {
+    input.classList.add('sin-borde');
+  });
+});
