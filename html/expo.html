@@ -80,7 +80,7 @@
   </header>  
 
     <main>
-        <h1 class="main-title">¡TCO! (<span class="thin">Total Cost of Ownership</span>) 📰</h1>
+        <h1 class="main-title">Impacto del (<span class="thin">Total Cost of Ownership</span>) en el proyecto 📰</h1>
 
         <div class="container">
             <div class="card">
@@ -88,13 +88,13 @@
                 <img src="/mediaExpo/cardsP1.jpg" alt="card__image" class="card__image" width="600">
               </div>
               <div class="card__body">
-                <span class="tag tag-blue">Lorem</span>
-                <h4>lorem</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                <span class="tag tag-blue">Cálculo</span>
+                <h4>Su importancia 📄</h4>
+                <p>Nos ha permitido comprender todos los costos asociados con el ciclo de vida del software, evaluar la viabilidad financiera a largo plazo, identificar áreas de optimización, gestionar riesgos y tomar decisiones estratégicas informadas. </p>
               </div>
               <div class="card__footer">
                 <div class="user">
-                  <img src="" alt="user__image" class="user__image">
+                  <img src="/media/user1.png" alt="user__image" class="user__image" width="50px" height="50px">
                   <div class="user__info">
                     <h5>Jane Doe</h5>
                     <small>Hace 1h</small>
@@ -107,13 +107,13 @@
                 <img src="/mediaExpo/cardsP2.jpg" alt="card__image" class="card__image" width="600">
               </div>
               <div class="card__body">
-                <span class="tag tag-brown">Lorem</span>
-                <h4>lorem</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                <span class="tag tag-brown">Su uso</span>
+                <h4>¿De qué nos sirvió? 🎯</h4>
+                <p>no solo nos proporciona una mayor seguridad financiera, sino que también nos prepara para enfrentar los desafíos futuros de manera efectiva.</p>
               </div>
               <div class="card__footer">
                 <div class="user">
-                  <img src="" alt="user__image" class="user__image">
+                  <img src="/media/user2.jpg" alt="user__image" class="user__image" width="50px" height="50px">
                   <div class="user__info">
                     <h5>Jony Doe</h5>
                     <small>Ayer</small>
@@ -126,13 +126,20 @@
                 <img src="/mediaExpo/cardsP3.jpg" alt="card__image" class="card__image" width="600">
               </div>
               <div class="card__body">
-                <span class="tag tag-red">Lorem</span>
-                <h4>lorem</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                <span class="tag tag-red">Aspectos</span>
+                <h4>fortalece cinco aspectos fundamentales: </h4>
+                <ol>
+                  <li>Comprensión de los costos 💸</li>
+                  <li>Evaluación del impacto financiero 💹</li>
+                  <li>Identificación de áreas de optimización 🎯</li>
+                  <li>Gestión de riesgos y reserva ✍️</li>
+                  <li>Impacto positivo en la toma de decisiones 🤔</li>
+                </ol>
+
               </div>
               <div class="card__footer">
                 <div class="user">
-                  <img src="" alt="user__image" class="user__image">
+                  <img src="/media/user4.jpg" alt="user__image" class="user__image" width="50px" height="50px">
                   <div class="user__info">
                     <h5>John Doe</h5>
                     <small>Hace 2d</small>
@@ -141,23 +148,79 @@
               </div>
             </div>
           </div>
+    <div class="TCOimg">
+      <h1 class="main-title">¡Costos del TCO de nuestro <span class="thin">caso! </span></h1>
+      <p class="main-title">¡Costos <span class="thin">iniciales</span> de adquisición! 💸</p>
+      <img src="/media/CIA.png" alt="CIA">
+  
+      <p class="main-title">¡Costos <span class="thin">operativos</span>! 🧑‍💻</p>
+      <img src="/media/CO.png" alt="CO">
+  
+      <p class="main-title">¡Costos de <span class="thin">Mantenimiento y Actualización</span>! 📄</p>
+      <img src="/media/CMA.png" alt="CMA">
+  
+      <h1 class="main-title">¡<span class="thin">Total</span>🫰 !</h1>
+      <img src="/media/CTotal.png" alt="CTotal">  
+    </div>
 
     <h1 class="main-title" style="padding-top: 180px;">¡Valor total del <span class="thin">TCO</span>! 💸💹</h1>
+    
     <!-- Sección de Calculadoras -->
     <section id="calculadoras">
         <div id="simulador">
-          <div class="input-group">
-            <input required="" type="number" name="number" id="ahorro" class="input">
-            <label class="user-label">Valor ahorro mensual (USD)</label>
+          <div class="blockInputs">
+              <div class="name-group">
+                <input required="" type="text" name="text" id="ahorroName" class="input">
+                <label class="user-label">Concepto</label>
+              </div>
+    
+              <div class="input-group">
+                <input required="" type="number" name="number" id="ahorro" class="input">
+                <label class="user-label">Valor (COP)</label>
+              </div>
+  
+            <button class="delete-btn" onclick="eliminarCampo(this)">
+              <svg viewBox="0 0 24 24">
+                  <path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
-          <div id="labelButton">
-              <button class="" data-effect="flicker" onclick="calcularAhorro()">
-                <span class="transition"></span>
-                <span class="gradient"></span>
-                <span class="text">Calcular Ahorro</span>
-              </button>
+
+        <!--<div class="input-group">
+          <div class="input-container">
+              <label class="user-label">Nombre</label>
+              <input required type="text" class="input nombre">
           </div>
+          <div class="input-container">
+              <label class="user-label">Valor ahorro mensual (USD)</label>
+              <input required type="number" name="number" class="input ahorro">
+          </div>
+          <button class="delete-btn" onclick="eliminarCampo(this)">
+              <svg viewBox="0 0 24 24">
+                  <path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </button>
+        </div>-->
+
+          <div class="buttons-container">
+            <div id="addButton">
+                <button onclick="agregarCampoAhorro()">
+                    <span class="transition"></span>
+                    <span class="gradient"></span>
+                    <span class="text">Agregar</span>
+                </button>
+            </div>
+            
+            <div id="labelButton">
+                <button onclick="calcularAhorro()">
+                    <span class="transition"></span>
+                    <span class="gradient"></span>
+                    <span class="text">Calcular Ahorro</span>
+                </button>
+            </div>
         </div>
+      </div>
+
         <div id="txtAnimated">
           <div>
             <span is="type-async" id="type-text">...</span>
