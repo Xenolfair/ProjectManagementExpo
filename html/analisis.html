@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio | To Do CIAF</title>
     <link rel="stylesheet" href="/css/analisis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="/media/shortcutIcon.webp">
 </head>
 <body>
@@ -132,6 +133,416 @@
                 <button>Dropper</buton>
               </div>
           </div>
+
+          <section class="service section " id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title padd-15">
+                        <h2>Riesgos de calidad ⚠️</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon">
+                                <i class="fa fa-mobile-alt"></i>
+                            </div>
+                            <h4>Rendimiento deficiente 🤷‍♂️</h4>
+                            <p> Tiempos de carga lentos, retrasos en tiempo real o cuelgues al mover 
+                              tareas. Sus causas pueden ser: Consultas ineficientes, Uso excesivo de CPU, Latencia de Red </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon">
+                                <i class="fa fa-laptop-code"></i>
+                            </div>
+                            <h4>Errores en la sincronización ⚙️</h4>
+                            <p>Cambios no visibles en tiempo real o pérdida de datos por ediciones 
+                              simultáneas. Sus causas son: Falta de manejo de concurrencia (sin CRDT o bloqueos), Fallos en el servidor (colas saturadas), Dependencia excesiva del cliente.   </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon">
+                                <i class="fa fa-palette"></i>
+                            </div>
+                            <h4>Problemas de escalabilidad 🧑‍💻</h4>
+                            <p> Colapso al pasar de cientos a miles de usuarios. Ejemplo: Sistema 
+                              falla con 1,000 equipos. Sus Causas son: Arquitectura monolítica, Sin caching, Infraestructura rígida (sin autoescalado como AWS Lambda)</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon">
+                                <i class="fa fa-code"></i>
+                            </div>
+                            <h4>Falta de seguridad 🦠⚠️</h4>
+                            <p>Brechas en datos sensibles (planes, documentos). Ejemplo: Ataques 
+                              roban o sabotean proyectos. Sus causas son: Autenticación débil (sin MFA), Datos sin cifrar (sin HTTPS o encriptación), Control de acceso insuficiente (roles mal definidos) </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        
+
+
+        <div class="dadPort">
+            <div class="PortAD">
+                <div class="main-content">
+                    <nav class="navbar">
+                        <ul class="navbar-list">
+                            <li class="navbar-item">
+                                <button class="navbar-link active" data-nav-link="about" onclick="changeSection('about', this)">1</button>
+                            </li>
+                            <li class="navbar-item">
+                                <button class="navbar-link" data-nav-link="resume" onclick="changeSection('resume', this)">2</button>
+                            </li>
+                        </ul>
+                    </nav>
+        
+                    <article class="about active" data-page="about">
+                            <h2 class="h2 article-title">Deuda Técnica 🧑‍💻⚠️</h2>
+        
+                        <section class="about-text">
+                            <p>Deuda técnica es el término que se utiliza para describir el resultado de tomar decisiones basadas en la velocidad por encima de todo. Estas decisiones rápidas, en tiempo real pueden hacer o deshacer las actualizaciones de software. </p>
+
+                            <div class="separator"></div>
+
+
+                            <h3 class="h3 article-title">⚙️ Deuda técnica en Fallas de seguridad 🧑‍💻</h3>
+                            <p>El sistema de gestión interna permite que las sesiones de los empleados permanezcan activas indefinidamente sin cerrar por inactividad</p>
+                            <ul>
+                                <li>➡️	Si un usuario deja su equipo desatendido, un atacante podría acceder sin restricciones</li>
+                                <li>➡️	Riesgo de uso indebido de credenciales</li>
+                            </ul>
+
+                            <h3 class="h3 article-title">⚙️ Deuda técnica por Error de diseño 🎨</h3>
+                            <p>No se implementara la autenticación multifactor (MFA) desde el inicio. Los desarrolladores deciden posponerlo porque quieren lanzar el producto rápido y se decide que se agregara en una fase posterior</p>
+                            <ul>
+                                <li>➡️	Riesgo de ataques de phishing y fuerza bruta</li>
+                                <li>➡️	Accesos no autorizados</li>
+                            </ul>
+
+                            <h3 class="h3 article-title">⚙️ Deuda técnica en calidad y pruebas ⚠️</h3>
+                            <p>Se decide no escribir pruebas automatizadas y confiar únicamente en pruebas manuales realizadas por QA</p>
+                            <ul>
+                                <li>➡️	Cada nueva versión debe pasar por un proceso manual de pruebas, lo que ralentiza el ciclo de desarrollo</li>
+                                <li>➡️	A medida que la aplicación crece, el esfuerzo manual se vuelve insostenible</li>
+                                <li>➡️	QA debe probar repetidamente las mismas funcionalidades en cada actualización</li>
+                                <li>✅  Falta de Monitoreo y Alertas de Sincronización</li>
+                                <li>✅  Dificultad para identificar y resolver problemas</li>
+                                <li>✅  Mayor carga en el equipo de desarrollo</li>
+                            </ul>
+
+                            <h3 class="h3 article-title">⚙️ Deuda Técnica Falta de Modo Offline Robusto 🥸</h3>
+                            <p>Los cambios hechos sin conexión pueden perderse o no aplicarse correctamente cuando el usuario vuelve a estar en línea. No hay un almacenamiento local para guardar cambios cuando no hay conexión</p>
+                            <ul>
+                                <li>➡️	Frustración del usuario porque los cambios desaparecen</li>
+                                <li>➡️	Pérdida de productividad si las tareas no se sincronizan correctamente</li>
+                                <li>➡️  Los usuarios migraran a otras plataformas</li>
+                            </ul>
+
+                            <h3 class="h3 article-title">⚙️ Uso Ineficiente del Almacenamiento en la Nube ☁️</h3>
+                            <p>La app guarda demasiados datos en la nube sin optimización, lo que incrementa costos y ralentiza la sincronización</p>
+                            <ul>
+                                <li>➡️	Costos elevados por almacenamiento innecesario</li>
+                                <li>➡️	Sincronización más lenta, afectando la experiencia del usuario</li>
+                            </ul>
+
+                            <h3 class="h3 article-title">⚙️ Deuda Técnica cifrado solo en transito 🔒</h3>
+                            <p>La app cifra la información solo cuando se transmite (por ejemplo, usando HTTPS), pero los datos almacenados en la base de datos o en backups quedan sin cifrar. Se asume que el acceso a la base de datos está suficientemente protegido</p>
+                            <ul>
+                                <li>➡️	Si un atacante obtiene acceso a la base de datos, podrá leer todos los datos sin restricción</li>
+                                <li>➡️	En caso de un fallo de seguridad</li>
+                            </ul>
+
+                            <h3 class="h3 article-title">⚙️ Deuda Técnica arquitectura  🧑‍💻</h3>
+                            <p>La aplicación sigue un diseño monolítico, y a medida que crece, se vuelve difícil escalar componentes individuales sin afectar todo el sistema</p>
+                            <ul>
+                                <li>➡️	Baja escalabilidad horizontal</li>
+                                <li>➡️	Actualizaciones difíciles</li>
+                                <li>➡️	Rendimiento degradado </li>
+                            </ul>
+                        </section>
+        
+                        <section class="service">
+                            <h3 class="h3 service-title">Aseguramiento de calidad 💎</h3>
+        
+                            <ul class="service-list">
+                                <li class="service-item2">
+                                    <div class="service-icon-box">
+                                        <img src="https://i.postimg.cc/4389jZkP/icon-design.png" alt="icon" width="40">
+                                    </div>
+        
+                                    <div class="service-content-box">
+                                        <h4 class="h4 service-item-title">Mejorar el rendimiento 🛜</h4>
+                                        <p class="service-item-text">Optimizar consultas a bases de datos, Reducir uso de CPU/Memoria, Minimizar latencia red</p>
+                                    </div>
+                                </li>
+        
+                                <li class="service-item2">
+                                    <div class="service-icon-box">
+                                        <img src="https://i.postimg.cc/ZqgqrqzG/icon-dev.png" alt="icon" width="40">
+                                    </div>
+        
+                                    <div class="service-content-box">
+                                        <h4 class="h4 service-item-title">Garantizar sincronización en tiempo real ⚙️</h4>
+                                        <p class="service-item-text">Manejar concurrencia, Robustecer servidor</p>
+                                    </div>
+                                </li>
+        
+                                <li class="service-item2">
+                                    <div class="service-icon-box">
+                                        <img src="https://i.postimg.cc/xjLdzYxZ/icon-app.png" alt="icon" width="40">
+                                    </div>
+        
+                                    <div class="service-content-box">
+                                        <h4 class="h4 service-item-title">Asegurar escalabilidad 🥇</h4>
+                                        <p class="service-item-text">Modernizar la arquitectura, Implementar caché estratégico, Autoescalado dinámico</p>
+                                    </div>
+                                </li>
+        
+                                <li class="service-item2">
+                                    <div class="service-icon-box">
+                                        <img src="https://i.postimg.cc/0NL8zHpx/icon-photo.png" alt="icon" width="40">
+                                    </div>
+        
+                                    <div class="service-content-box">
+                                        <h4 class="h4 service-item-title">Fortalecer seguridad 🔒</h4>
+                                        <p class="service-item-text">Autenticación robusta, Proteger datos, Control de acceso</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+        
+                        <section class="testimonials">
+                            <h3 class="h3 testimonials-title">Estudiantes 💎</h3>
+        
+                            <ul class="testimonials-list has-scrollbar">
+                                <li class="testimonials-item">
+                                    <div class="content-card" data-testimonials-item>
+                                        <figure class="testimonials-avatar-box">
+                                            <img src="/media/miguel.png" alt="avatar" data-testimonials-avatar width="60">
+                                        </figure>
+        
+                                        <h4 class="h4 testimonials-item-title" data-testimonials-title>Miguel Angel Ballesteros 🧑‍💻</h4>
+        
+                                        <div class="testimonials-text" data-testimonials-text>
+                                            <p>"Un código limpio siempre parece haber sido escrito por alguien que se preocupaba." – Robert C. Martin</p>
+                                        </div>
+                                    </div>
+                                </li>
+        
+                                <li class="testimonials-item">
+                                    <div class="content-card" data-testimonials-item>
+                                        <figure class="testimonials-avatar-box">
+                                            <img src="/media/juan.png" alt="avatar" data-testimonials-avatar width="60">
+                                        </figure>
+        
+                                        <h4 class="h4 testimonials-item-title" data-testimonials-title>Juan Pulgarín</h4>
+        
+                                        <div class="testimonials-text" data-testimonials-text>
+                                            <p>"No pruebes el código para ver si funciona, pruébalo para ver si falla." – Jack Ganssle</p>
+                                        </div>
+                                    </div>
+                                </li>
+        
+                                <li class="testimonials-item">
+                                    <div class="content-card" data-testimonials-item>
+                                        <figure class="testimonials-avatar-box">
+                                            <img src="https://i.postimg.cc/JzBWVhW4/my-avatar.png" alt="avatar" data-testimonials-avatar width="60">
+                                        </figure>
+        
+                                        <h4 class="h4 testimonials-item-title" data-testimonials-title>Luis Alejandro Ospina</h4>
+        
+                                        <div class="testimonials-text" data-testimonials-text>
+                                            <p>"La calidad del software no se mide por la ausencia de errores, sino por la ausencia de errores críticos." – Boris Beizer</p>
+                                        </div>
+                                    </div>
+                                </li>
+        
+                                <li class="testimonials-item">
+                                    <div class="content-card" data-testimonials-item>
+                                        <figure class="testimonials-avatar-box">
+                                            <img src="/media/angel.png" alt="avatar" data-testimonials-avatar width="60">
+                                        </figure>
+        
+                                        <h4 class="h4 testimonials-item-title" data-testimonials-title>Angel Arenas</h4>
+        
+                                        <div class="testimonials-text" data-testimonials-text>
+                                            <p>"No hay atajos cuando se trata de calidad." – Anónimo</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="testimonials-item">
+                                    <div class="content-card" data-testimonials-item>
+                                        <figure class="testimonials-avatar-box">
+                                            <img src="/media/oscar.png" alt="avatar" data-testimonials-avatar width="60">
+                                        </figure>
+        
+                                        <h4 class="h4 testimonials-item-title" data-testimonials-title>Oscar Gil</h4>
+        
+                                        <div class="testimonials-text" data-testimonials-text>
+                                            <p>"Si quieres que tu código sea fácil de escribir, haz que sea fácil de leer." – Steve McConnell</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="testimonials-item">
+                                    <div class="content-card" data-testimonials-item>
+                                        <figure class="testimonials-avatar-box">
+                                            <img src="/media/daniel2.png" alt="avatar" data-testimonials-avatar width="60">
+                                        </figure>
+        
+                                        <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel Vasques</h4>
+        
+                                        <div class="testimonials-text" data-testimonials-text>
+                                            <p>"Un software mal diseñado es como una bomba de tiempo, tarde o temprano explotará." – Anónimo</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+        
+
+                    </article>
+                    
+                    <article class="resume" data-page="resume">
+                        <header>
+                            <h2 class="h2 article-title">Resume</h2>
+                        </header>
+        
+                        <section class="timeline">
+                            <div class="title-wrapper">
+                                <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+        
+                                <h3 class="h3">Medidas de control ✅</h3>
+                            </div>
+        
+                            <ol class="timeline-list">
+                                <li class="timeline-item">
+                                    <h4 class="h4 timeline-item-title">Gestión y Planificación de Requisitos 🤔</h4>
+                                    <span></span>
+                                    <p class="timeline-text">Definir claramente las funcionalidades como la interfaz, la colaboración en tiempo real, la integración con otras herramientas, el soporte multiplataforma y los criterios de calidad</p>
+                                </li>
+
+                                <li class="timeline-item">
+                                    <h4 class="h4 timeline-item-title">Metodología de desarrollo ágil ✍️</h4>
+                                    <span></span>
+                                    <p class="timeline-text">Utilizar metodologías agiles como Scrum para iterar rápidamente, obtener feedback y ajustar los requisitos</p>
+                                </li>
+        
+                                <li class="timeline-item">
+                                    <h4 class="h4 timeline-item-title">Control de calidad y pruebas 🌐</h4>
+                                    <span></span>
+                                    <p class="timeline-text">Verificar la consistencia y actualización en tiempo real de los datos para evitar retrasos y errores en la información que se comparte</p>
+                                </li>
+        
+                                <li class="timeline-item">
+                                    <h4 class="h4 timeline-item-title">Monitoreo y Logging 🕵️</h4>
+                                    <span></span>
+                                    <p class="timeline-text">Implementar un sistema robusto de logging para analizar errores, incidentes y comportamientos inesperados de la aplicación</p>
+                                </li>
+                            </ol>
+                        </section>
+        
+                        <section class="timeline">
+                            <div class="title-wrapper">
+                                <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+        
+                                <h3 class="h3">Medidas de Control Vitales 💎</h3>
+                            </div>
+        
+                            <ol class="timeline-list">
+                                <li class="timeline-item">
+                                    <h4 class="h4 timeline-item-title">Seguridad integral 🔒</h4>
+                                    <span></span>
+                                    <p class="timeline-text">Realizar pruebas de vulnerabilidad para detectar y corregir posibles vulnerabilidades</p>
+                                </li>
+        
+                                <li class="timeline-item">
+                                    <h4 class="h4 timeline-item-title">Arquitectura escalable y modular 🛜</h4>
+                                    <span></span>
+                                    <p class="timeline-text">Adoptar arquitecturas basadas en microservicios o componentes desacoplados, facilitando la escalabilidad</p>
+                                </li>
+        
+                                <li class="timeline-item">
+                                    <h4 class="h4 timeline-item-title">Documentación y capacitación 📄</h4>
+                                    <span></span>
+                                    <p class="timeline-text">Asegurar que todos los integrantes del equipo estén familiarizados con las herramientas, metodologías y estándares de calidad adoptados</p>
+                                </li>
+                            </ol>
+                        </section>
+        
+                        <section class="skill">
+                            <h3 class="h3 skills-title">Métricas de Calidad del Software ⚙️🤔</h3>
+        
+                            <ul class="skills-list content-card">
+                                <li class="skills-item">
+                                    <div class="title-wrapper">
+                                        <h5 class="h5">Legibilidad del Código</h5>
+                                        <data value="90">90%</data>
+                                    </div>
+        
+                                    <div class="skills-progress-bg">
+                                        <div class="skills-progress-fill" style="width: 80%;"></div>
+                                    </div>
+                                </li>
+        
+                                <li class="skills-item">
+                                    <div class="title-wrapper">
+                                        <h5 class="h5">Cobertura de Pruebas</h5>
+                                        <data value="85">85%</data>
+                                    </div>
+        
+                                    <div class="skills-progress-bg">
+                                        <div class="skills-progress-fill" style="width: 70%;"></div>
+                                    </div>
+                                </li>
+        
+                                <li class="skills-item">
+                                    <div class="title-wrapper">
+                                        <h5 class="h5">Optimización del Rendimiento</h5>
+                                        <data value="80">80%</data>
+                                    </div>
+        
+                                    <div class="skills-progress-bg">
+                                        <div class="skills-progress-fill" style="width: 90%;"></div>
+                                    </div>
+                                </li>
+        
+                                <li class="skills-item">
+                                    <div class="title-wrapper">
+                                        <h5 class="h5">Cumplimiento de Estándares de Seguridad</h5>
+                                        <data value="75">75%</data>
+                                    </div>
+        
+                                    <div class="skills-progress-bg">
+                                        <div class="skills-progress-fill" style="width: 50%;"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
     </main>
 
     <div class="wave">
